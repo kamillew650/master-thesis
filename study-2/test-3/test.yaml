@@ -1,0 +1,49 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: test-pod
+  labels:
+    test: 2-2
+spec:
+  containers:
+    - name: container-1
+      image: nginx:stable
+    # - name: container-2
+    #   image: alpine
+    # - name: container-3
+    #   image: alpine
+    # - name: container-4
+    #   image: nginx:stable
+    # - name: container-5
+    #   image: nginx:stable
+    - name: container-6
+      image: alpine
+    # - name: container-9
+    #   image: nginx:stable
+    # - name: container-10
+    #   image: nginx:stable
+    #   resources:
+    #     limits:
+    #       cpu: "0.5"
+    #     requests:
+    #       cpu: "0.5"
+    # - name: container-11
+    #   image: nginx:stable
+    # - name: container-12
+    #   image: nginx:stable
+    # - name: container-13
+    #   image: nginx:stable
+    # - name: container-14
+    #   image: nginx:stable
+    # - name: container-15
+    #   image: nginx:stable
+    # - name: container-16
+    #   image: nginx:stable
+    # - name: container-17
+    #   image: nginx:stable
+    # - name: container-18
+    #   image: nginx:stable
+    # - name: container-19
+    #   image: nginx:stable
+    # - name: container-20
+    #   image: nginx:stable
