@@ -7,9 +7,85 @@ metadata:
 spec:
   containers:
     - name: container-1
-      image: test-nginx-image
+      image: alpine
+      command: ["/bin/sh", "-c"]
+      args:
+        - echo 1-$(date +"%T.%6N");
+          while true; do
+          sleep 5;
+          done
     - name: container-2
-      image: test-nginx-image-2
+      image: alpine
+      command: ["/bin/sh", "-c"]
+      args:
+        - echo 2-$(date +"%T.%6N");
+          while true; do
+          sleep 5;
+          done
+    - name: container-3
+      image: alpine
+      command: ["/bin/sh", "-c"]
+      args:
+        - echo 3-$(date +"%T.%6N");
+          while true; do
+          sleep 5;
+          done
+    - name: container-4
+      image: alpine
+      command: ["/bin/sh", "-c"]
+      args:
+        - echo 4-$(date +"%T.%6N");
+          while true; do
+          sleep 5;
+          done
+    - name: container-5
+      image: alpine
+      command: ["/bin/sh", "-c"]
+      args:
+        - echo 5-$(date +"%T.%6N");
+          while true; do
+          sleep 5;
+          done
+    - name: container-6
+      image: alpine
+      command: ["/bin/sh", "-c"]
+      args:
+        - echo 6-$(date +"%T.%6N");
+          while true; do
+          sleep 5;
+          done
+    - name: container-7
+      image: alpine
+      command: ["/bin/sh", "-c"]
+      args:
+        - echo 7-$(date +"%T.%6N");
+          while true; do
+          sleep 5;
+          done
+    - name: container-8
+      image: alpine
+      command: ["/bin/sh", "-c"]
+      args:
+        - echo 8-$(date +"%T.%6N");
+          while true; do
+          sleep 5;
+          done
+    - name: container-9
+      image: alpine
+      command: ["/bin/sh", "-c"]
+      args:
+        - echo 9-$(date +"%T.%6N");
+          while true; do
+          sleep 5;
+          done
+    - name: container-10
+      image: alpine
+      command: ["/bin/sh", "-c"]
+      args:
+        - echo 10-$(date +"%T.%6N");
+          while true; do
+          sleep 5;
+          done
     # - name: container-3
     #   image: nginx:stable
     # - name: container-4
