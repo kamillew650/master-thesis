@@ -7,88 +7,32 @@ metadata:
 spec:
   containers:
     - name: container-1
-      image: alpine
-      command: ["/bin/sh", "-c"]
-      args:
-        - echo 1-$(date +"%T.%6N");
-          while true; do
-          sleep 5;
-          done
+      image: test-alpine:latest
+      imagePullPolicy: Never
+      env:
+        - name: NUMBER
+          value: "1"
     - name: container-2
-      image: alpine
-      command: ["/bin/sh", "-c"]
-      args:
-        - echo 2-$(date +"%T.%6N");
-          while true; do
-          sleep 5;
-          done
+      image: test-alpine:latest
+      imagePullPolicy: Never
+      env:
+        - name: NUMBER
+          value: "2"
     - name: container-3
-      image: alpine
-      command: ["/bin/sh", "-c"]
-      args:
-        - echo 3-$(date +"%T.%6N");
-          while true; do
-          sleep 5;
-          done
+      image: test-alpine:latest
+      imagePullPolicy: Never
+      env:
+        - name: NUMBER
+          value: "3"
     - name: container-4
-      image: alpine
-      command: ["/bin/sh", "-c"]
-      args:
-        - echo 4-$(date +"%T.%6N");
-          while true; do
-          sleep 5;
-          done
+      image: test-alpine:latest
+      imagePullPolicy: Never
+      env:
+        - name: NUMBER
+          value: "4"
     - name: container-5
-      image: alpine
-      command: ["/bin/sh", "-c"]
-      args:
-        - echo 5-$(date +"%T.%6N");
-          while true; do
-          sleep 5;
-          done
-    - name: container-6
-      image: alpine
-      command: ["/bin/sh", "-c"]
-      args:
-        - echo 6-$(date +"%T.%6N");
-          while true; do
-          sleep 5;
-          done
-    - name: container-7
-      image: alpine
-      command: ["/bin/sh", "-c"]
-      args:
-        - echo 7-$(date +"%T.%6N");
-          while true; do
-          sleep 5;
-          done
-    - name: container-8
-      image: alpine
-      command: ["/bin/sh", "-c"]
-      args:
-        - echo 8-$(date +"%T.%6N");
-          while true; do
-          sleep 5;
-          done
-    - name: container-9
-      image: alpine
-      command: ["/bin/sh", "-c"]
-      args:
-        - echo 9-$(date +"%T.%6N");
-          while true; do
-          sleep 5;
-          done
-    - name: container-10
-      image: alpine
-      command: ["/bin/sh", "-c"]
-      args:
-        - echo 10-$(date +"%T.%6N");
-          while true; do
-          sleep 5;
-          done
-    # - name: container-3
-    #   image: nginx:stable
-    # - name: container-4
-    #   image: nginx:stable
-    # - name: container-5
-    #   image: nginx:stable
+      image: test-alpine:latest
+      imagePullPolicy: Never
+      env:
+        - name: NUMBER
+          value: "5"

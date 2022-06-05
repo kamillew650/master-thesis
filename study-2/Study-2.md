@@ -3,14 +3,16 @@
 W drugim scenariuszu badawczym sprawdzony będzie czas uruchamiania do stanu gotowości obiektów Kubernetes.
 Wybranych jest kilka obiektów w różnej konfiguracji.
 
-1. W pierwszej konfiguracji zostanie uruchomiony jeden pod z określoną liczbą kontenerów. Kontener powstanie z przygotowanego obrazu. Depinicja obrazu jest zapisana w pliku Dockerfile. Podobnie jak w pierwszym scenariuszu testowym brany będzie pod uwagę wyłącznie czas utworzenia poda wraz z uruchomieniem procesów w kontenerach. Niezbędne obrazy zostały pobrane wcześniej. Pod uznany jest za stworzony kiedy jego wszystkie kontenery znajdujące sie w nim zostają utworzone a procesy w tych kontenerach uruchomione.
+Wybrane zostało kilka konfiguracji. W każdej konfiguracji zostanie uruchomiony jeden pod z określoną liczbą kontenerów. Kontener powstanie z przygotowanego obrazu. Depinicja obrazu jest zapisana w pliku Dockerfile. Podobnie jak w pierwszym scenariuszu testowym brany będzie pod uwagę wyłącznie czas utworzenia poda oraz uruchomienia procesów w kontenerach. Niezbędne obrazy zostały pobrane wcześniej. Pod uznany jest za stworzony kiedy jego wszystkie kontenery znajdujące sie w nim zostają utworzone a procesy w tych kontenerach uruchomione.
 
-W kontenerach zostaje uruchomiony proces powłoki który wypisuje date z godziną a następnie wchodzi w nieskończoną pętle która rurchamia polecenie "sleep". Dzięki temu w logach możemy sprawdzić kiedy proces w kontenerze został uruchomiony.
+W kontenerach zostaje uruchomiony proces powłoki który wypisuje date z godziną a następnie wchodzi w nieskończoną pętle która uruchamia polecenie "sleep". Dzięki temu w logach możemy sprawdzić kiedy proces w kontenerze został uruchomiony.
 
 Instrukcja użyta do utworzenia poda jest zapisana w pliku uruchamiającym test.
 W celu obiczenia wyników należy zmierzyć czas wykonywania polecenia oraz czas przejścia poda do stanu "Running". Informacja taka jest zapisywana prze Kubernete w opisie poda.
 
 Komenda do utworzenia poda `kubectl create -f test-1.yaml`.
+
+Aby móc skorzystać z lokalnego repozytorium z obrazami niezbędne było użycie kilku dodatkowych komend. Dla narzędzia minikube wymagane jest ustawienie `imagePullPolicy: Never`. Należy również użyć komend które są zapisane w pliku `minikube-conf.bash`. Dla narzędzia kind wymagane jest ustawienie `imagePullPolicy: Never`. Aby móc korzystać z danego ubrazu należy go również załadować do do dostępnej puli obrazów komendą `kind load docker-image test-alpine`.
 
 NOTE: Aby obliczyć czas należy odjęć czas pobrany zaraz przed uruchomieniem poda od czasu w którym pod osiągnął warunek "Ready" o wartości "True".
 
