@@ -12,8 +12,6 @@ W celu obiczenia wyników należy zmierzyć czas wykonywania polecenia oraz czas
 
 Komenda do utworzenia poda `kubectl create -f test-1.yaml`.
 
-Aby móc skorzystać z lokalnego repozytorium z obrazami niezbędne było użycie kilku dodatkowych komend. Dla narzędzia minikube wymagane jest ustawienie `imagePullPolicy: Never`. Należy również użyć komend które są zapisane w pliku `minikube-conf.bash`. Dla narzędzia kind wymagane jest ustawienie `imagePullPolicy: Never`. Aby móc korzystać z danego ubrazu należy go również załadować do do dostępnej puli obrazów komendą `kind load docker-image test-alpine`.
-
 NOTE: Aby obliczyć czas należy odjęć czas pobrany zaraz przed uruchomieniem poda od czasu w którym pod osiągnął warunek "Ready" o wartości "True".
 
 NOTE: Dowiedziałem się że nie można uruchomić w podzie wielu kontenerów wystawiających ten sam port. Również kontener bez uruchomonego procesu w nim przestaje działać.
