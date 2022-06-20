@@ -1,0 +1,78 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: test-replica-set
+  labels:
+    test: 2-2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-replica-set
+  template:
+    metadata:
+      name: container
+      labels:
+        app: test-replica-set
+    spec:
+      containers:
+        - name: container-1
+          image: test-alpine
+          imagePullPolicy: Never
+          env:
+            - name: NUMBER
+              value: "1"
+        - name: container-2
+          image: test-alpine
+          imagePullPolicy: Never
+          env:
+            - name: NUMBER
+              value: "2"
+        - name: container-3
+          image: test-alpine
+          imagePullPolicy: Never
+          env:
+            - name: NUMBER
+              value: "3"
+        - name: container-4
+          image: test-alpine
+          imagePullPolicy: Never
+          env:
+            - name: NUMBER
+              value: "4"
+        - name: container-5
+          image: test-alpine
+          imagePullPolicy: Never
+          env:
+            - name: NUMBER
+              value: "5"
+        - name: container-6
+          image: test-alpine
+          imagePullPolicy: Never
+          env:
+            - name: NUMBER
+              value: "6"
+        - name: container-7
+          image: test-alpine
+          imagePullPolicy: Never
+          env:
+            - name: NUMBER
+              value: "7"
+        - name: container-8
+          image: test-alpine
+          imagePullPolicy: Never
+          env:
+            - name: NUMBER
+              value: "8"
+        - name: container-9
+          image: test-alpine
+          imagePullPolicy: Never
+          env:
+            - name: NUMBER
+              value: "9"
+        - name: container-10
+          image: test-alpine
+          imagePullPolicy: Never
+          env:
+            - name: NUMBER
+              value: "10"
