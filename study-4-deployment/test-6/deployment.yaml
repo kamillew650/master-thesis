@@ -1,19 +1,19 @@
 apiVersion: apps/v1
-kind: ReplicaSet
+kind: Deployment
 metadata:
-  name: test-replica-set
+  name: test-deployment
   labels:
     test: 2-2
 spec:
   replicas: 20
   selector:
     matchLabels:
-      app: test-replica-set
+      app: test-deployment
   template:
     metadata:
       name: container
       labels:
-        app: test-replica-set
+        app: test-deployment
     spec:
       containers:
         - name: container-1
