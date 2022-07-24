@@ -1,1 +1,3 @@
 Aby móc skorzystać z lokalnego repozytorium z obrazami niezbędne było użycie kilku dodatkowych komend. Dla narzędzia minikube wymagane jest ustawienie `imagePullPolicy: Never`. Należy również użyć komend które są zapisane w pliku `minikube-conf.bash`. Dla narzędzia kind wymagane jest ustawienie `imagePullPolicy: Never`. Aby móc korzystać z danego ubrazu należy go również załadować do do dostępnej puli obrazów komendą `kind load docker-image test-alpine`.
+
+Dla minikube należy wykonać polecenie `eval $(minikube -p minikube docker-env)` przed każdym budowaniem nowego obrazu który ma być dostępny dla narzędzia.

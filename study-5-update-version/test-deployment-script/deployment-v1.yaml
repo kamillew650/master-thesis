@@ -5,7 +5,7 @@ metadata:
   labels:
     test: test
 spec:
-  replicas: 1
+  replicas: 10
   selector:
     matchLabels:
       app: test-deployment
@@ -17,5 +17,5 @@ spec:
     spec:
       containers:
         - name: container
-          image: deployment:1
+          image: test-alpine:latest
           imagePullPolicy: Never
