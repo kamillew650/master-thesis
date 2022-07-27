@@ -5,7 +5,7 @@ kubectl delete Deployment deployment-update;
 
 while ( $(kubectl get Deployment | grep -q 'No resources found in default namespace.No resources found in default namespace.' ) )
 do
-echo 'no'
+echo 'not ready'
 done
 kubectl create -f ./deployment-v2.yaml;
 
