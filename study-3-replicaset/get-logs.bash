@@ -1,3 +1,3 @@
 #!/bin/bash
 
-kubectl logs -l app=test-replica-set;
+kubectl logs --all-containers=true -l app=test-replica-set;

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-kubectl delete ReplicaSet test-pod;
+kubectl delete pod test-pod --grace-period=0 --force;

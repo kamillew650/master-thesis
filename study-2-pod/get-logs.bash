@@ -1,3 +1,4 @@
 #!/bin/bash
 
-kubectl logs -l app=test-replica-set;
+# kubectl logs test-pod;
+kubectl logs --all-containers=true test-pod;

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo $(gdate +"%Y-%m-%dT%H:%M:%S%z");
+echo $(date +"%Y-%m-%dT%H:%M:%S%z");
 kubectl delete Deployment deployment-update;
 
 while ( $(kubectl get Deployment | grep -q 'No resources found in default namespace.No resources found in default namespace.' ) )

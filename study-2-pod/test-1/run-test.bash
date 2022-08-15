@@ -1,7 +1,4 @@
 #!/bin/bash
 
-echo $(date +"%Y-%m-%dT%H:%M:%S%z");
+echo $(date +"%T.%6N");
 kubectl create -f ./test.yaml;
-sleep 5;
-kubectl get pod test-pod -o yaml | grep -A 17 conditions;
-

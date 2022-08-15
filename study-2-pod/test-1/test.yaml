@@ -7,4 +7,5 @@ metadata:
 spec:
   containers:
     - name: container-1
-      image: nginx:stable
+      image: test-alpine:latest
+      imagePullPolicy: Never

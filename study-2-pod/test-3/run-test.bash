@@ -1,5 +1,5 @@
 #!/bin/bash
 
-echo $(date +"%Y-%m-%dT%H:%M:%S%z");
+echo $(date +"%T.%6N");
 kubectl create -f ./test.yaml;
 
