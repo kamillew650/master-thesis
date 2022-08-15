@@ -1,3 +1,3 @@
 #!/bin/bash
 
-kubectl logs -t app=test-replica-set;
+kubectl logs -l app=test-deployment;
