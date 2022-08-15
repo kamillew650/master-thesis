@@ -16,7 +16,7 @@ spec:
         app: test-replica-set
     spec:
       containers:
-                - name: container-1
+        - name: container-1
           image: test-alpine
           imagePullPolicy: Never
           env:

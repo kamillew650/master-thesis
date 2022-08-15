@@ -1,0 +1,15 @@
+start run 1
+00:39:31.584334
+replicaset.apps/test-replica-set created
+end
+-22:39:32.618924
+start run 2
+00:39:41.141255
+replicaset.apps/test-replica-set created
+end
+-22:39:42.095024
+start run 3
+00:39:50.661243
+replicaset.apps/test-replica-set created
+end
+-22:39:51.569495
