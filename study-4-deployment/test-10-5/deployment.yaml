@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-deployment
+  labels:
+    test: 2-2
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: test-deployment
+  template:
+    metadata:
+      name: container
+      labels:
+        app: test-deployment
+    spec:
+      containers:
+        - name: container-1
+          image: test-alpine:latest
+          imagePullPolicy: Never
+          env:
+            - name: NUMBER
+              value: "1"
+        - name: container-2
+          image: test-alpine:latest
+          imagePullPolicy: Never
+          env:
+            - name: NUMBER
+              value: "2"
+        - name: container-3
+          image: test-alpine:latest
+          imagePullPolicy: Never
+          env:
+            - name: NUMBER
+              value: "3"
+        - name: container-4
+          image: test-alpine:latest
+          imagePullPolicy: Never
+          env:
+            - name: NUMBER
+              value: "4"
+        - name: container-5
+          image: test-alpine:latest
+          imagePullPolicy: Never
+          env:
+            - name: NUMBER
+              value: "5"
