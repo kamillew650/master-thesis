@@ -1,0 +1,4 @@
+start run 1
+01:08:48.451678
+replicaset.apps/test-replica-set created
+end
