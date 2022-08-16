@@ -1,9 +1,10 @@
 #!/bin/bash
 
+variants1=(20)
 variants=(1 5 10 20)
 series=(1 2 3)
 
-for v1 in ${variants[@]}; do
+for v1 in ${variants1[@]}; do
   for v2 in ${variants[@]}; do
     for s in ${series[@]}; do
     
@@ -18,7 +19,7 @@ for v1 in ${variants[@]}; do
       resultLines=`../get-logs.bash | wc -l`;
       requiredAmountOfLines=$(($v1 * $v2));
 
-      sleep $requiredAmountOfLines;
+      sleep 20;
 
       echo $resultLines;
       echo $requiredAmountOfLines;
