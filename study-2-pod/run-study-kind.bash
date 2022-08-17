@@ -3,21 +3,21 @@
 variants=(1 5 10 20);
 series=(1 2 3);
 
-for v1 in ${variants1[@]}; do
+for v1 in ${variants[@]}; do
   for s in ${series[@]}; do
   
     echo $v1;
     echo $v2;
     cd ./"test-${v1}";
 
-    echo "start run ${s}" >> ./result-minikube.txt;
+    echo "start run ${s}" >> ./result-kind.txt;
 
     startTime=$(./run-test.bash | head -n 1);
 
     # ./run-test.bash >> ./result.txt;
 
     resultLines=`../get-all-logs.bash | wc -l`;
-    requiredAmountOfLines=$(($v1 * $v2));
+    requiredAmountOfLines=$(($v1));
 
     sleep $v2;
 
@@ -31,7 +31,9 @@ for v1 in ${variants1[@]}; do
 
     endTime=$(../get-logs.bash);
 
-    echo "= ${endTime} - ${startTime}" >> ./result-minikube.txt;
+    echo "= ${endTime} - ${startTime}" >> ./result-kind.txt;
+    echo "------------" >> ./result-kind.txt;
+    ../get-all-logs.bash >> ./result-kind.txt;
 
     ../clean-up.bash;
 

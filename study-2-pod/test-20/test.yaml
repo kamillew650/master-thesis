@@ -7,122 +7,62 @@ metadata:
 spec:
   containers:
     - name: container-1
-      image: test-alpine
+      image: test-alpine:latest
       imagePullPolicy: Never
-      env:
-        - name: NUMBER
-          value: "1"
     - name: container-2
-      image: test-alpine
+      image: test-alpine:latest
       imagePullPolicy: Never
-      env:
-        - name: NUMBER
-          value: "2"
     - name: container-3
-      image: test-alpine
+      image: test-alpine:latest
       imagePullPolicy: Never
-      env:
-        - name: NUMBER
-          value: "3"
     - name: container-4
-      image: test-alpine
+      image: test-alpine:latest
       imagePullPolicy: Never
-      env:
-        - name: NUMBER
-          value: "4"
     - name: container-5
-      image: test-alpine
+      image: test-alpine:latest
       imagePullPolicy: Never
-      env:
-        - name: NUMBER
-          value: "5"
     - name: container-6
-      image: test-alpine
+      image: test-alpine:latest
       imagePullPolicy: Never
-      env:
-        - name: NUMBER
-          value: "6"
     - name: container-7
-      image: test-alpine
+      image: test-alpine:latest
       imagePullPolicy: Never
-      env:
-        - name: NUMBER
-          value: "7"
     - name: container-8
-      image: test-alpine
+      image: test-alpine:latest
       imagePullPolicy: Never
-      env:
-        - name: NUMBER
-          value: "8"
     - name: container-9
-      image: test-alpine
+      image: test-alpine:latest
       imagePullPolicy: Never
-      env:
-        - name: NUMBER
-          value: "9"
     - name: container-10
-      image: test-alpine
+      image: test-alpine:latest
       imagePullPolicy: Never
-      env:
-        - name: NUMBER
-          value: "10"
     - name: container-11
-      image: test-alpine
+      image: test-alpine:latest
       imagePullPolicy: Never
-      env:
-        - name: NUMBER
-          value: "11"
     - name: container-12
-      image: test-alpine
+      image: test-alpine:latest
       imagePullPolicy: Never
-      env:
-        - name: NUMBER
-          value: "12"
     - name: container-13
-      image: test-alpine
+      image: test-alpine:latest
       imagePullPolicy: Never
-      env:
-        - name: NUMBER
-          value: "13"
     - name: container-14
-      image: test-alpine
+      image: test-alpine:latest
       imagePullPolicy: Never
-      env:
-        - name: NUMBER
-          value: "14"
     - name: container-15
-      image: test-alpine
+      image: test-alpine:latest
       imagePullPolicy: Never
-      env:
-        - name: NUMBER
-          value: "15"
     - name: container-16
-      image: test-alpine
+      image: test-alpine:latest
       imagePullPolicy: Never
-      env:
-        - name: NUMBER
-          value: "16"
     - name: container-17
-      image: test-alpine
+      image: test-alpine:latest
       imagePullPolicy: Never
-      env:
-        - name: NUMBER
-          value: "17"
     - name: container-18
-      image: test-alpine
+      image: test-alpine:latest
       imagePullPolicy: Never
-      env:
-        - name: NUMBER
-          value: "18"
     - name: container-19
-      image: test-alpine
+      image: test-alpine:latest
       imagePullPolicy: Never
-      env:
-        - name: NUMBER
-          value: "19"
     - name: container-20
-      image: test-alpine
+      image: test-alpine:latest
       imagePullPolicy: Never
-      env:
-        - name: NUMBER
-          value: "20"
