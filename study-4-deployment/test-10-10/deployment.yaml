@@ -5,7 +5,7 @@ metadata:
   labels:
     test: 2-2
 spec:
-  replicas: 1
+  replicas: 10
   selector:
     matchLabels:
       app: test-deployment
@@ -45,34 +45,3 @@ spec:
           imagePullPolicy: Never
         - name: container-10
           image: test-alpine
-          imagePullPolicy: Never
-        - name: container-11
-          image: test-alpine
-          imagePullPolicy: Never
-        - name: container-12
-          image: test-alpine
-          imagePullPolicy: Never
-        - name: container-13
-          image: test-alpine
-          imagePullPolicy: Never
-        - name: container-14
-          image: test-alpine
-          imagePullPolicy: Never
-        - name: container-15
-          image: test-alpine
-          imagePullPolicy: Never
-        - name: container-16
-          image: test-alpine
-          imagePullPolicy: Never
-        - name: container-17
-          image: test-alpine
-          imagePullPolicy: Never
-        - name: container-18
-          image: test-alpine
-          imagePullPolicy: Never
-        - name: container-19
-          image: test-alpine
-          imagePullPolicy: Never
-        - name: container-20
-          image: test-alpine
-          imagePullPolicy: Never

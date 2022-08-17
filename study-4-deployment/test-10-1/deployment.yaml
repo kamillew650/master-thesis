@@ -19,6 +19,3 @@ spec:
         - name: container-1
           image: test-alpine
           imagePullPolicy: Never
-          env:
-            - name: NUMBER
-              value: "1"

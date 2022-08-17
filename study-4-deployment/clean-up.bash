@@ -1,3 +1,3 @@
 #!/bin/bash
 
-kubectl delete ReplicaSet test-deployment;
+kubectl delete Deployment test-deployment;

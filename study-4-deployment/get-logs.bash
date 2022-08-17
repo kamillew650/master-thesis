@@ -1,3 +1,3 @@
 #!/bin/bash
 
-kubectl logs -l app=test-deployment;
+kubectl logs --all-containers=true -l app=test-deployment;
