@@ -1,9 +1,7 @@
 #!/bin/bash
 
-variants1=(10)
-variants2=(1 5)
-variants=(1 5 10 20)
-series=(1 2 3)
+variants=(1 5 10 20);
+series=(1 2 3);
 
 for v1 in ${variants1[@]}; do
   for v2 in ${variants2[@]}; do
@@ -14,23 +12,27 @@ for v1 in ${variants1[@]}; do
       cd ./"test-${v1}-${v2}";
 
       echo "start run ${s}" >> ./result.txt;
-      ./run-test.bash >> ./result.txt;
-      echo "end" >> ./result.txt;
 
-      resultLines=`../get-logs.bash | wc -l`;
+      startTime=$(./run-test.bash | head -n 1);
+
+      # ./run-test.bash >> ./result.txt;
+
+      resultLines=`../get-all-logs.bash | wc -l`;
       requiredAmountOfLines=$(($v1 * $v2));
 
-      sleep 20;
+      sleep $v2;
 
       echo $resultLines;
       echo $requiredAmountOfLines;
       while ((resultLines < requiredAmountOfLines)); do
         echo "waiting for get-logs to finish";
         sleep 5s;
-        resultLines=`../get-logs.bash | wc -l`;
+        resultLines=`../get-all-logs.bash | wc -l`;
       done;
 
-      ../get-logs.bash >> ./result.txt;
+      endTime=$(../get-logs.bash);
+
+      echo "= ${endTime} - ${startTime}" >> ./result.txt;
 
       ../clean-up.bash;
 

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-kubectl delete pod test-pod --grace-period=0 --force;
+kubectl delete --all pods --grace-period=0 --force;
