@@ -1,11 +1,13 @@
 #!/bin/bash
 
 variants=(1 5 10 20);
-variants1=(20);
+variants1=(5);
+variants2=(1);
+
 series=(1 2 3);
 
 for v1 in ${variants1[@]}; do
-  for v2 in ${variants1[@]}; do
+  for v2 in ${variants2[@]}; do
     for s in ${series[@]}; do
     
       echo $v1;
