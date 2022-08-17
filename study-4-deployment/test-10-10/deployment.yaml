@@ -45,3 +45,5 @@ spec:
           imagePullPolicy: Never
         - name: container-10
           image: test-alpine:latest
+          imagePullPolicy: Never
+

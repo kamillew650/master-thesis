@@ -17,5 +17,5 @@ spec:
     spec:
       containers:
         - name: container
-          image: test-alpine:latest:latest
+          image: test-alpine:latest
           imagePullPolicy: Never
