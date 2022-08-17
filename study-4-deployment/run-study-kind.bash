@@ -14,7 +14,7 @@ for v1 in ${variants[@]}; do
       echo $v2;
       cd ./"test-${v1}-${v2}";
 
-      echo "start run ${s}" >> ./result.txt;
+      echo "start run ${s}" >> ./result-kind.txt;
 
       startTime=$(./run-test.bash | head -n 1);
 
@@ -35,9 +35,9 @@ for v1 in ${variants[@]}; do
 
       endTime=$(../get-logs.bash);
 
-      echo "= ${endTime} - ${startTime}" >> ./result.txt;
-      echo "------------" >> ./result.txt;
-      ../get-all-logs.bash >> ./result.txt;
+      echo "= ${endTime} - ${startTime}" >> ./result-kind.txt;
+      echo "------------" >> ./result-kind.txt;
+      ../get-all-logs.bash >> ./result-kind.txt;
 
       ../clean-up.bash;
 

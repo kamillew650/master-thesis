@@ -33,6 +33,8 @@ for v1 in ${variants1[@]}; do
       endTime=$(../get-logs.bash);
 
       echo "= ${endTime} - ${startTime}" >> ./result.txt;
+      echo "------------" >> ./result-kind.txt;
+      ../get-all-logs.bash >> ./result-kind.txt;
 
       ../clean-up.bash;
 
