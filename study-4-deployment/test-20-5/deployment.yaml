@@ -17,17 +17,17 @@ spec:
     spec:
       containers:
         - name: container-1
-          image: test-alpine
+          image: test-alpine:latest
           imagePullPolicy: Never
         - name: container-2
-          image: test-alpine
+          image: test-alpine:latest
           imagePullPolicy: Never
         - name: container-3
-          image: test-alpine
+          image: test-alpine:latest
           imagePullPolicy: Never
         - name: container-4
-          image: test-alpine
+          image: test-alpine:latest
           imagePullPolicy: Never
         - name: container-5
-          image: test-alpine
+          image: test-alpine:latest
           imagePullPolicy: Never

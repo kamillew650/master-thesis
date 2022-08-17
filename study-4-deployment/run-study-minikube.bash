@@ -12,9 +12,10 @@ for v1 in ${variants[@]}; do
       cd ./"test-${v1}-${v2}";
 
       echo "start run ${s}" >> ./result.txt;
-      echo "="
-      ./run-test.bash >> ./result.txt;
-      echo "-" >> ./result.txt;
+
+      startTime=$(./run-test.bash | head -n 1);
+
+      # ./run-test.bash >> ./result.txt;
 
       resultLines=`../get-logs.bash | wc -l`;
       requiredAmountOfLines=$(($v1 * $v2));
@@ -29,7 +30,9 @@ for v1 in ${variants[@]}; do
         resultLines=`../get-logs.bash | wc -l`;
       done;
 
-      ../get-logs.bash >> ./result.txt;
+      endTime=$(../get-logs.bash);
+
+      echo "= ${endTime} - ${startTime}" >> ./result.txt;
 
       ../clean-up.bash;
 
