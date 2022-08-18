@@ -1,9 +1,9 @@
 #!/bin/bash
 
-variants1=(1);
-variants2=(5);
+variants1=(10);
+variants2=(5 10);
 
-variants=(1 5 10 20);
+variants=(1 5 10);
 series=(1 2 3);
 
 outputFile="result-minikube.txt";
