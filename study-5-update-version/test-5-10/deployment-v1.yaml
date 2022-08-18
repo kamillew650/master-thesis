@@ -17,32 +17,32 @@ spec:
     spec:
       containers:
         - name: container-1
-          image: test-alpine:latest
+          image: deployment:1
           imagePullPolicy: Never
         - name: container-2
-          image: test-alpine:latest
+          image: deployment:1
           imagePullPolicy: Never
         - name: container-3
-          image: test-alpine:latest
+          image: deployment:1
           imagePullPolicy: Never
         - name: container-4
-          image: test-alpine:latest
+          image: deployment:1
           imagePullPolicy: Never
         - name: container-5
-          image: test-alpine:latest
+          image: deployment:1
           imagePullPolicy: Never
         - name: container-6
-          image: test-alpine:latest
+          image: deployment:1
           imagePullPolicy: Never
         - name: container-7
-          image: test-alpine:latest
+          image: deployment:1
           imagePullPolicy: Never
         - name: container-8
-          image: test-alpine:latest
+          image: deployment:1
           imagePullPolicy: Never
         - name: container-9
-          image: test-alpine:latest
+          image: deployment:1
           imagePullPolicy: Never
         - name: container-10
-          image: test-alpine:latest
+          image: deployment:1
           imagePullPolicy: Never

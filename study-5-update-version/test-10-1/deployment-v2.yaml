@@ -16,6 +16,6 @@ spec:
         app: test-deployment-update
     spec:
       containers:
-        - name: container
-          image: container-2
+        - name: container-1
+          image: deployment:2
           imagePullPolicy: Never
