@@ -16,18 +16,18 @@ spec:
         app: test-deployment-update
     spec:
       containers:
-        - name: deployment:1
-          image: test-alpine:latest
+        - name: container-1
+          image: deployment:1
           imagePullPolicy: Never
-        - name: deployment:2
-          image: test-alpine:latest
+        - name: container-2
+          image: deployment:1
           imagePullPolicy: Never
-        - name: deployment:3
-          image: test-alpine:latest
+        - name: container-3
+          image: deployment:1
           imagePullPolicy: Never
-        - name: deployment:4
-          image: test-alpine:latest
+        - name: container-4
+          image: deployment:1
           imagePullPolicy: Never
-        - name: deployment:5
-          image: test-alpine:latest
+        - name: container-5
+          image: deployment:1
           imagePullPolicy: Never

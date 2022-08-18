@@ -17,5 +17,5 @@ spec:
     spec:
       containers:
         - name: container
-          image: deployment:2
+          image: container-2
           imagePullPolicy: Never
