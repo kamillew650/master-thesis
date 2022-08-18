@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-deployment-update
+  labels:
+    test: test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-deployment-update
+  template:
+    metadata:
+      name: container
+      labels:
+        app: test-deployment-update
+    spec:
+      containers:
+        - name: deployment:2
+          image: test-alpine:latest
+          imagePullPolicy: Never
+        - name: deployment:2
+          image: test-alpine:latest
+          imagePullPolicy: Never
+        - name: deployment:2
+          image: test-alpine:latest
+          imagePullPolicy: Never
+        - name: deployment:2
+          image: test-alpine:latest
+          imagePullPolicy: Never
+        - name: deployment:2
+          image: test-alpine:latest
+          imagePullPolicy: Never

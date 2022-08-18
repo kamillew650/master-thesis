@@ -1,0 +1,25 @@
+Badanie Pod
+
+W tym badaniu mierzony jest czas uruchomienia obiektu Pod w zależności od ilości kontenerów. Obiekt Pod jest najmniejszym obiektem w środowisku Kubernetes. Składa się on z jednego lub wielu kontenerów. Kontenery te dzielą zasoby takie jak pamięć dyskowa.
+
+Badanie przeprowadzone jest dla dwóch środowisk uruchomieniowych Kubernete’sa: minikube oraz kind. Obiekty zostały utworzone z następującą ilością kontenerów: 1, 5, 10, 20. Każdy pomiar został przeprowadzony trzy razy.
+
+Czas uruchomienia obiektu wyliczany jest z różnicy czasu pobranego przed uruchomieniem obiektu Pod oraz czasu uruchomienia ostatniego kontenera. Aby pobrać czas z kontenera użyty został stworzony na taką potrzebę obraz. Zaraz po uruchomieniu kontenera skrypt wypisuje obecny czas. Kubernetes pozwala odczytywać logi z obiektów.
+
+
+Badanie ReplicaSet
+
+W tym badaniu mierzony jest czas uruchomienia obiektu ReplicaSet w zależności od ilości obiektów typu Pod oraz ilości kontenerów w każdym obiekcie typu Pod. Obiekt ReplicaSet pozwala na uruchamianie określonej ilości takich samych obiektów typu Pod. Możliwa jest również łatwa zmiana ilości zarządzanych obiektów typu Pod.
+
+Badanie przeprowadzone jest dla dwóch środowisk uruchomieniowych Kubernete’sa: minikube oraz kind. Obiekty zostały utworzone z następującą ilością obiektów typu Pod: 1, 5, 10, 20. Kolejną zmienną była ilość kontenerów w każdym obiekcie typu Pod: 1, 5, 10, 20. Każdy pomiar został przeprowadzony trzy razy.
+
+Czas uruchomienia obiektu wyliczany jest z różnicy czasu pobranego przed uruchomieniem obiektu ReplicaSet oraz czasu uruchomienia ostatniego kontenera. Aby pobrać czas z kontenera użyty został stworzony na taką potrzebę obraz. Zaraz po uruchomieniu kontenera, skrypt wypisuje obecny czas. Kubernetes pozwala odczytywać logi z obiektów.
+
+
+Badanie Deployment:
+
+W tym badaniu mierzony jest czas uruchomienia obiektu Deploymeny w zależności od ilości obiektów typu Pod oraz ilości kontenerów w każdym obiekcie typu Pod. Obiekt Deployment pozwala na uruchamianie określonej ilości takich samych obiektów typu Pod. Możliwa jest również łatwa zmiana ilości zarządzanych obiektów typu Pod. Dodatkowo obiekt Deployment pozwala na łatwą zmianie wersji podlegających obiektów.
+
+Badanie przeprowadzone jest dla dwóch środowisk uruchomieniowych Kubernete’sa: minikube oraz kind. Obiekty zostały utworzone z następującą ilością obiektów typu Pod: 1, 5, 10, 20. Kolejną zmienną była ilość kontenerów w każdym obiekcie typu Pod: 1, 5, 10, 20. Każdy pomiar został przeprowadzony trzy razy.
+
+Czas uruchomienia obiektu wyliczany jest z różnicy czasu pobranego przed uruchomieniem obiektu ReplicaSet oraz czasu uruchomienia ostatniego kontenera. Aby pobrać czas z kontenera użyty został stworzony na taką potrzebę obraz. Zaraz po uruchomieniu kontenera, skrypt wypisuje obecny czas. Kubernetes pozwala odczytywać logi z obiektów.
