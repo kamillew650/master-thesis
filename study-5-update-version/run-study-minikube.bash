@@ -1,7 +1,7 @@
 #!/bin/bash
 
 variants1=(1);
-variants2=(1 5);
+variants2=(5);
 
 variants=(1 5 10 20);
 series=(1 2 3);
@@ -95,10 +95,7 @@ for v1 in ${variants1[@]}; do
 
       startTime=$(./update-script.bash | head -n 1);
 
-      # ./run-test.bash >> ./result.txt;
-
-
-      sleep $v2;
+      sleep 10;
 
       resultLines=`../get-all-logs.bash | wc -l`;
       requiredAmountOfLines=$(($v1 * $v2));
@@ -107,6 +104,7 @@ for v1 in ${variants1[@]}; do
       echo $requiredAmountOfLines;
       while ((resultLines != requiredAmountOfLines)); do
         echo "waiting for get-logs to finish";
+        echo "${resultLines}, ${requiredAmountOfLines}"
         sleep 5s;
         resultLines=`../get-all-logs.bash | wc -l`;
       done;
@@ -158,7 +156,7 @@ for v1 in ${variants1[@]}; do
       # ./run-test.bash >> ./result.txt;
 
 
-      sleep $v2;
+      sleep 10;
 
       resultLines=`../get-all-logs.bash | wc -l`;
       requiredAmountOfLines=$(($v1 * $v2));
