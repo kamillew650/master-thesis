@@ -8,8 +8,8 @@ series=(1 2 3);
 
 outputFile="result-kind.txt";
 
-for v1 in ${variants1[@]}; do
-  for v2 in ${variants2[@]}; do
+for v1 in ${variants[@]}; do
+  for v2 in ${variants[@]}; do
     cd ./"test-${v1}-${v2}";
 
     for s in ${series[@]}; do
@@ -156,7 +156,7 @@ for v1 in ${variants1[@]}; do
       # ./run-test.bash >> ./result.txt;
 
 
-      sleep 10;
+      sleep 20;
 
       resultLines=`../get-all-logs.bash | wc -l`;
       requiredAmountOfLines=$(($v1 * $v2));
