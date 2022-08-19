@@ -6,10 +6,10 @@ variants2=(5 10);
 variants=(1 5 10);
 series=(1 2 3);
 
-outputFile="result-kind.txt";
+outputFile="result-kind-set-image.txt";
 
-for v1 in ${variants[@]}; do
-  for v2 in ${variants[@]}; do
+for v1 in ${variants2[@]}; do
+  for v2 in ${variants2[@]}; do
     cd ./"test-${v1}-${v2}";
 
     for s in ${series[@]}; do
