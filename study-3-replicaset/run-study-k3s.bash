@@ -7,7 +7,7 @@ outputFile="result-k3s.txt";
 
 
 for v1 in ${variants[@]}; do
-  for v2 in ${variants2[@]}; do
+  for v2 in ${variants[@]}; do
     for s in ${series[@]}; do
     
       echo $v1;
