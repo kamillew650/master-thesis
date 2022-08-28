@@ -17,7 +17,7 @@ for v1 in ${variants[@]}; do
       echo "start run ${s}" >> ./"${outputFile}";
 
       startTime=$(date +"%S,%6N");
-      k3s kubectl create -f ./deployment.yaml;;
+      k3s kubectl create -f ./deployment.yaml;
 
       resultLines=`k3s kubectl logs --all-containers=true -l app=test-deployment; | wc -l`;
       requiredAmountOfLines=$(($v1 * $v2));
@@ -36,8 +36,8 @@ for v1 in ${variants[@]}; do
 
       echo "= ${endTime} - ${startTime}" >> ./"${outputFile}";
 
-      kubectl delete Deployment test-deployment --grace-period=0 --force;
-      kubectl delete --all pods --grace-period=0 --force;
+      k3s kubectl delete Deployment test-deployment --grace-period=0 --force;
+      k3s kubectl delete --all pods --grace-period=0 --force;
 
       sleep 3;
 
