@@ -19,7 +19,7 @@ for v1 in ${variants[@]}; do
       startTime=$(date +"%S,%6N");
       k3s kubectl create -f ./deployment.yaml;
 
-      resultLines=`k3s kubectl logs --all-containers=true -l app=test-deployment; | wc -l`;
+      resultLines=`k3s kubectl logs --all-containers=true -l app=test-deployment | wc -l`;
       requiredAmountOfLines=$(($v1 * $v2));
 
       sleep $v2;
