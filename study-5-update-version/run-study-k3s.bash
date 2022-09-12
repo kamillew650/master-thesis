@@ -75,7 +75,7 @@ for v1 in ${variants[@]}; do
       echo $v1;
       echo $v2;   
 
-      echo "start apply run ${s}" >> ./"${outputFile}";
+      echo "start script run ${s}" >> ./"${outputFile}";
 
       k3s kubectl create -f ./deployment-v1.yaml;
 
@@ -141,7 +141,7 @@ for v1 in ${variants[@]}; do
       echo $v1;
       echo $v2;   
 
-      echo "start apply run ${s}" >> ./"${outputFile}";
+      echo "start set-image run ${s}" >> ./"${outputFile}";
 
       k3s kubectl create -f ./deployment-v1.yaml;
 
