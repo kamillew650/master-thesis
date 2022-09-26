@@ -1,31 +1,39 @@
 const express = require("express");
 const app = express();
-const port = 3000;
+const port = 4000;
 
 app.get("/simple-response", (req, res) => {
   res.send("Hello World!");
 });
 
-app.get("/calculation-1", (req, res) => {
-  let a = 1;
-  let b = 2;
-  let c;
-  while (b < 10000) {
-    c = a + b;
-    a = b;
-    b = c;
-  }
-  res.send("Hello World!");
-});
+app.get("/calculation", (req, res) => {
+  const { from, to } = req.query;
 
-app.get("/calculation-2", (req, res) => {
-  let a = 0;
-  while (a < 100000000) {
-    let b = Math.random() * 300 * (Math.random() * 700);
-    a += 1;
+  console.log("from", from);
+  console.log("to", to);
+
+  parsedFrom = parseInt(from);
+  parsedTo = parseInt(to);
+
+  const calculationTime =
+    Math.random() * (parsedTo - parsedFrom) + parseInt(parsedFrom);
+
+  const start = Date.now();
+  const end = start + Math.round(calculationTime);
+
+  console.log("calculationTime ", calculationTime);
+
+  console.log(start, end);
+
+  while (end > Date.now()) {
+    const calc = Math.random() * Math.random();
   }
-  let response = Math.random();
-  res.send(response.toString());
+
+  res.send(
+    `End of calculation, time: ${(Math.round(calculationTime) / 1000).toFixed(
+      4
+    )} seconds`
+  );
 });
 
 app.get("/file", (req, res) => {
