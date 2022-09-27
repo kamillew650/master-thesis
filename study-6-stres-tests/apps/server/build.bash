@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t stres-test-server .
+docker build -t stress-test-server .
