@@ -3,7 +3,7 @@
 variants=(1 5 10 20);
 series=(1 2 3);
 
-outputFile="result-k3s.txt";
+outputFile="result-kind.txt";
 
 for v1 in ${variants[@]}; do
   for s in ${series[@]}; do
@@ -15,11 +15,9 @@ for v1 in ${variants[@]}; do
     echo "start run ${s}" >> ./"${outputFile}";
 
     startTime=$(date +"%S,%6N");
-    k3s kubectl create -f ./test.yaml;
-    
-    # ./run-test.bash >> ./result.txt;
+    kubectl create -f ./test.yaml;
 
-    resultLines=`k3s kubectl logs --all-containers=true test-pod | wc -l`;
+    resultLines=`kubectl logs --all-containers=true test-pod | wc -l`;
     requiredAmountOfLines=$(($v1));
 
     sleep $v1;
@@ -29,23 +27,23 @@ for v1 in ${variants[@]}; do
     while ((resultLines < requiredAmountOfLines)); do
       echo "waiting for get-logs to finish";
       sleep 5s;
-      resultLines=`k3s kubectl logs --all-containers=true test-pod | wc -l`;
+      resultLines=`kubectl logs --all-containers=true test-pod | wc -l`;
     done;
 
-    endTime=$(k3s kubectl logs --all-containers=true test-pod | sort -r | head -n 1);
+    endTime=$(kubectl logs --all-containers=true test-pod | sort -r | head -n 1);
 
     echo "= ${endTime} - ${startTime}" >> ./"${outputFile}";
 
-    k3s kubectl delete --all pods --grace-period=0 --force;
+    kubectl delete --all pods --grace-period=0 --force;
 
     sleep 3;
 
-    cleanUpResult=`k3s kubectl logs --all-containers=true test-pod | sort -r | head -n 1 | grep "not found"`;
+    cleanUpResult=`kubectl logs --all-containers=true test-pod | sort -r | head -n 1 | grep "not found"`;
 
     while ! $cleanUpResult; do
       echo "waiting for clean-up to finish";
       sleep 1;
-      cleanUpResult=`k3s kubectl logs --all-containers=true test-pod | sort -r | head -n 1 | grep "not found"`;
+      cleanUpResult=`kubectl logs --all-containers=true test-pod | sort -r | head -n 1 | grep "not found"`;
     done;
 
     cd ..;
