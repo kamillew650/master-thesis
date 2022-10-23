@@ -2,8 +2,8 @@
 #!/bin/bash
 
 variants=(1 5 10 20);
-variants1=(5);
-variants2=(20);
+variants1=(10);
+variants2=(5);
 
 
 series=(1 2 3);
