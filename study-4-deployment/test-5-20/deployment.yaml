@@ -5,7 +5,7 @@ metadata:
   labels:
     test: 2-2
 spec:
-  replicas: 20
+  replicas: 5
   selector:
     matchLabels:
       app: test-deployment

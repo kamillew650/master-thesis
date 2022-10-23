@@ -1,12 +1,12 @@
 #!/bin/bash
 
 variants1=(10);
-variants2=(5 10);
+variants2=(1 5 10);
 
 variants=(1 5 10);
 series=(1 2 3);
 
-outputFile="result-k3s.txt";
+outputFile="result-k3s-3.txt";
 
 for v1 in ${variants[@]}; do
   for v2 in ${variants[@]}; do
@@ -33,7 +33,7 @@ for v1 in ${variants[@]}; do
         resultLines=`k3s kubectl logs --all-containers=true -l app=test-deployment-update | wc -l`;
       done;
 
-      startTime=$(date +"%S,%6N");
+      startTime="$(( 10#$(date +"%M") * 10#60 + 10#$(date +"%S") ))$(date +",%6N")";
       k3s kubectl apply -f ./deployment-v2.yaml;
 
       sleep 5;
@@ -92,7 +92,7 @@ for v1 in ${variants[@]}; do
         resultLines=`k3s kubectl logs --all-containers=true -l app=test-deployment-update | wc -l`;
       done;
 
-      startTime=$(date +"%S,%6N");
+      startTime="$(( 10#$(date +"%M") * 10#60 + 10#$(date +"%S") ))$(date +",%6N")";
       k3s kubectl delete Deployment test-deployment-update --grace-period=0 --force;
       k3s kubectl delete --all pods --grace-period=0 --force;
 
@@ -158,7 +158,7 @@ for v1 in ${variants[@]}; do
         resultLines=`k3s kubectl logs --all-containers=true -l app=test-deployment-update | wc -l`;
       done;
 
-      startTime=$(date +"%S,%6N");
+      startTime="$(( 10#$(date +"%M") * 10#60 + 10#$(date +"%S") ))$(date +",%6N")";
       if [[ "$v2" -eq 1 ]]; then
         k3s kubectl set image deployment/test-deployment-update container-1=deployment:2;
       fi

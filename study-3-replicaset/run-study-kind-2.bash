@@ -1,13 +1,17 @@
 #!/bin/bash
 
 variants=(1 5 10 20);
+variants1=(20);
+variants2=(1);
+
+
 series=(1 2 3);
 
-outputFile="result-k3s-2.txt";
+outputFile="result-kind-2.txt";
 
 
-for v1 in ${variants[@]}; do
-  for v2 in ${variants[@]}; do
+for v1 in ${variants1[@]}; do
+  for v2 in ${variants2[@]}; do
     for s in ${series[@]}; do
     
       echo $v1;
@@ -37,7 +41,13 @@ for v1 in ${variants[@]}; do
 
       endTime=$(kubectl logs --all-containers=true -l app=test-replica-set | sort -r | head -n 1);
 
+      allLogs=$(kubectl logs --all-containers=true -l app=test-replica-set | sort -r);
+
+
       echo "= ${endTime} - ${startTime}" >> ./"${outputFile}";
+      echo "-------------------------------------------------" >> ./"${outputFile}";
+      echo "${allLogs}" >> ./"${outputFile}";
+
 
       kubectl delete ReplicaSet test-replica-set --grace-period=0 --force;
       kubectl delete --all pods --grace-period=0 --force;
