@@ -6,7 +6,7 @@ variants2=(1 5 10);
 variants=(1 5 10);
 series=(1 2 3);
 
-outputFile="result-kind-2.txt";
+outputFile="result-kind-2-really.txt";
 
 for v1 in ${variants[@]}; do
   for v2 in ${variants[@]}; do
