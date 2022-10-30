@@ -14,7 +14,7 @@ for v1 in ${variants[@]}; do
 
     echo "start run ${s}" >> ./"${outputFile}";
 
-    startTime=$(date +"%S,%6N");
+    startTime=$(date +"%s,%6N");
     kubectl create -f ./test.yaml;
 
     resultLines=`kubectl logs --all-containers=true test-pod | wc -l`;

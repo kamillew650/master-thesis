@@ -18,7 +18,7 @@ for v1 in ${variants1[@]}; do
 
       echo "start run ${s}" >> ./"${outputFile}";
 
-      startTime=$(date +"%S,%6N");
+      startTime=$(date +"%s,%6N");
       k3s kubectl create -f ./deployment.yaml;
 
       resultLines=`k3s kubectl logs --all-containers=true -l app=test-deployment | wc -l`;

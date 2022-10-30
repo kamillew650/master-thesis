@@ -20,7 +20,7 @@ for v1 in ${variants1[@]}; do
 
       echo "start run ${s}" >> ./"${outputFile}";
 
-      startTime=$(date +"%S,%6N");
+      startTime=$(date +"%s,%6N");
       kubectl create -f ./replica-set.yaml;
 
 

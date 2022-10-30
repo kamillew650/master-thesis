@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo $(date +"%S,%6N");
+echo $(date +"%s,%6N");
 
  while true; do
           sleep 5;
