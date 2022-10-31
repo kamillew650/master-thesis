@@ -1,6 +1,6 @@
 #!/bin/bash
 
-folderName="results-minikube";
+folderName="results-kind";
 
 kubectl create -f ./pod.yaml;
 
