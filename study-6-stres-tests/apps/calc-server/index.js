@@ -28,3 +28,7 @@ app.get("/calculation", (req, res) => {
     )} seconds`
   );
 });
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`);
+});

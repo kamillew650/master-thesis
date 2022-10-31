@@ -7,6 +7,6 @@ export const options = {
 };
 
 export default function () {
-  http.get("http://localhost:3000/calculation-2");
+  http.get(`${__ENV.SERVICE_URL}/simple-response`);
   sleep(1);
 }
