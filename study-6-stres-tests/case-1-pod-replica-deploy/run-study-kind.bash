@@ -72,7 +72,7 @@ kubectl port-forward service/stress-test 30100:4000&
 
 echo "start run ${s}" >> ./"${outputFileDep}";
 
-result=`k6 run ../k6/configuration.js`;
+result=`k6 run ./k6/configuration.js`;
 
 echo "$result" >> ./"${outputFileDep}";
 

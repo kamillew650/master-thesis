@@ -45,7 +45,7 @@ export SERVICE_URL="http://localhost:${servicePort}";
 
 echo "start run ${s}" >> ./"${outputFileRep}";
 
-result=`k6 run ../k6/configuration.js`;
+result=`k6 run ./configuration-1.js`;
 
 echo "$result" >> ./"${outputFileRep}";
 
@@ -73,7 +73,7 @@ export SERVICE_URL="http://localhost:${servicePort}";
 
 echo "start run ${s}" >> ./"${outputFileDep}";
 
-result=`k6 run ../k6/configuration.js`;
+result=`k6 run ./configuration.js`;
 
 echo "$result" >> ./"${outputFileDep}";
 
