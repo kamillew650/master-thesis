@@ -9,9 +9,6 @@ app.get("/simple-response", (req, res) => {
 app.get("/calculation", (req, res) => {
   const { from, to } = req.query;
 
-  console.log("from", from);
-  console.log("to", to);
-
   parsedFrom = parseInt(from);
   parsedTo = parseInt(to);
 
@@ -20,10 +17,6 @@ app.get("/calculation", (req, res) => {
 
   const start = Date.now();
   const end = start + Math.round(calculationTime);
-
-  console.log("calculationTime ", calculationTime);
-
-  console.log(start, end);
 
   while (end > Date.now()) {
     const calc = Math.random() * Math.random();
@@ -34,13 +27,4 @@ app.get("/calculation", (req, res) => {
       4
     )} seconds`
   );
-});
-
-app.get("/file", (req, res) => {
-  const file = `${__dirname}/files/100MB.file`;
-  res.download(file);
-});
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
 });
