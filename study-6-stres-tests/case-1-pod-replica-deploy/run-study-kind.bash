@@ -12,11 +12,12 @@ kubectl create -f ./pod.yaml;
 kubectl expose pod stress-test --target-port 4000 --name stress-test --type=LoadBalancer --port 4000;
 # kubectl create service LoadBalancer stress-test --node-port=30100 --tcp=4000:4000;
 
-kubectl port-forward service/stress-test 30100:4000&;
+sleep 5;
+
+kubectl port-forward service/stress-test 30100:4000&
 
 export SERVICE_URL="localhost:30100";
 
-sleep 5;
 
 echo "start run ${s}" >> ./"${outputFilePod}";
 
@@ -36,11 +37,12 @@ kubectl create -f ./replica-set.yaml;
 
 kubectl expose ReplicaSet stress-test --target-port 4000 --name stress-test --type=LoadBalancer --port 4000;
 
-kubectl port-forward service/stress-test 30100:4000&;
+sleep 5;
+
+kubectl port-forward service/stress-test 30100:4000&
 
 export SERVICE_URL="localhost:30100";
 
-sleep 5;
 
 echo "start run ${s}" >> ./"${outputFileRep}";
 
@@ -61,7 +63,7 @@ kubectl create -f ./deployment.yaml;
 
 kubectl expose Deployment stress-test --target-port 4000 --name stress-test --type=LoadBalancer --port 4000;
 
-kubectl port-forward service/stress-test 30100:4000&;
+kubectl port-forward service/stress-test 30100:4000&
 
 export SERVICE_URL="localhost:30100";
 
