@@ -2,7 +2,7 @@
 
 folderName="results-kind";
 
-kubectl create -f ./set.yaml;
+kubectl create -f ./replica-set.yaml;
 
 kubectl expose ReplicaSet stress-test --target-port 4000 --name stress-test --type=LoadBalancer --port 4000;
 

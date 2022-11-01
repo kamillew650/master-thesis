@@ -2,7 +2,7 @@
 
 folderName="results-k3s";
 
-k3s kubectl create -f ./set.yaml;
+k3s kubectl create -f ./replica-set.yaml;
 
 k3s kubectl expose ReplicaSet stress-test --target-port 4000 --name stress-test --type=LoadBalancer --port 4000;
 # k3s kubectl create service LoadBalancer stress-test --node-port=30100 --tcp=4000:4000;
