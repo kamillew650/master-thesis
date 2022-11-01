@@ -4,7 +4,7 @@ folderName="results-minikube";
 
 kubectl create -f ./pod.yaml;
 
-kubectl expose ReplicaSet stress-test --target-port 4000 --name stress-test --type=LoadBalancer --port 4000;
+kubectl expose pod stress-test --target-port 4000 --name stress-test --type=LoadBalancer --port 4000;
 
 url=`minikube service stress-test --url`;
 
