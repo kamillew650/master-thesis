@@ -54,5 +54,4 @@ echo "$result" >> ./"${folderName}/conf-spike-calc-100-200-1r";
 sleep 3;
 
 kubectl delete service stress-test --grace-period=0 --force;
-kubectl delete ReplicaSet stress-test --grace-period=0 --force;
 kubectl delete --all pods --grace-period=0 --force;
