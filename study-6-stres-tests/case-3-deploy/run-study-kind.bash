@@ -10,6 +10,8 @@ sleep 5;
 
 kubectl port-forward service/stress-test 30100:4000&
 
+export SERVICE_URL="http://localhost:30100";
+
 result=`k6 run ./conf-load-test-simple.js`;
 echo "$result" >> ./"${folderName}/conf-load-simple-1r";
 
