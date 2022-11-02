@@ -53,7 +53,7 @@ export TIME_TO=200
 result=`k6 run ./conf-spike-test-calc.js`;
 echo "$result" >> ./"${folderName}/conf-spike-calc-100-200-1r";
 
-kubectl scale ReplicaSet stress-test --replicas=5;
+kubectl scale Deployment stress-test --replicas=5;
 
 sleep 10;
 
@@ -97,7 +97,7 @@ result=`k6 run ./conf-spike-test-calc.js`;
 echo "$result" >> ./"${folderName}/conf-spike-calc-100-200-5r";
 
 
-kubectl scale ReplicaSet stress-test --replicas=10;
+kubectl scale Deployment stress-test --replicas=10;
 
 sleep 10;
 
@@ -140,7 +140,7 @@ export TIME_TO=200
 result=`k6 run ./conf-spike-test-calc.js`;
 echo "$result" >> ./"${folderName}/conf-spike-calc-100-200-10r";
 
-kubectl scale ReplicaSet stress-test --replicas=20;
+kubectl scale Deployment stress-test --replicas=20;
 
 sleep 10;
 

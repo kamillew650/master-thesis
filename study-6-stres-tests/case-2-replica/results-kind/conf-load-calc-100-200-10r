@@ -49,10 +49,10 @@ default   [  24% ] 100/100 VUs  11.0s/45.0s
 running (0m12.0s), 100/100 VUs, 648 complete and 0 interrupted iterations
 default   [  27% ] 100/100 VUs  12.0s/45.0s
 
-running (0m13.0s), 100/100 VUs, 747 complete and 0 interrupted iterations
+running (0m13.0s), 100/100 VUs, 748 complete and 0 interrupted iterations
 default   [  29% ] 100/100 VUs  13.0s/45.0s
 
-running (0m14.0s), 100/100 VUs, 847 complete and 0 interrupted iterations
+running (0m14.0s), 100/100 VUs, 848 complete and 0 interrupted iterations
 default   [  31% ] 100/100 VUs  14.0s/45.0s
 
 running (0m15.0s), 100/100 VUs, 947 complete and 0 interrupted iterations
@@ -106,10 +106,10 @@ default   [  67% ] 100/100 VUs  30.0s/45.0s
 running (0m31.0s), 100/100 VUs, 2546 complete and 0 interrupted iterations
 default   [  69% ] 100/100 VUs  31.0s/45.0s
 
-running (0m32.0s), 100/100 VUs, 2646 complete and 0 interrupted iterations
+running (0m32.0s), 100/100 VUs, 2645 complete and 0 interrupted iterations
 default   [  71% ] 100/100 VUs  32.0s/45.0s
 
-running (0m33.0s), 100/100 VUs, 2746 complete and 0 interrupted iterations
+running (0m33.0s), 100/100 VUs, 2745 complete and 0 interrupted iterations
 default   [  73% ] 100/100 VUs  33.0s/45.0s
 
 running (0m34.0s), 100/100 VUs, 2845 complete and 0 interrupted iterations
@@ -127,16 +127,16 @@ default   [  82% ] 100/100 VUs  37.0s/45.0s
 running (0m38.0s), 100/100 VUs, 3245 complete and 0 interrupted iterations
 default   [  84% ] 100/100 VUs  38.0s/45.0s
 
-running (0m39.0s), 100/100 VUs, 3345 complete and 0 interrupted iterations
+running (0m39.0s), 100/100 VUs, 3344 complete and 0 interrupted iterations
 default   [  87% ] 100/100 VUs  39.0s/45.0s
 
-running (0m40.0s), 100/100 VUs, 3445 complete and 0 interrupted iterations
+running (0m40.0s), 100/100 VUs, 3444 complete and 0 interrupted iterations
 default   [  89% ] 100/100 VUs  40.0s/45.0s
 
-running (0m41.0s), 091/100 VUs, 3545 complete and 0 interrupted iterations
+running (0m41.0s), 091/100 VUs, 3544 complete and 0 interrupted iterations
 default   [  91% ] 091/100 VUs  41.0s/45.0s
 
-running (0m42.0s), 071/100 VUs, 3636 complete and 0 interrupted iterations
+running (0m42.0s), 071/100 VUs, 3635 complete and 0 interrupted iterations
 default   [  93% ] 071/100 VUs  42.0s/45.0s
 
 running (0m43.0s), 052/100 VUs, 3706 complete and 0 interrupted iterations
@@ -153,16 +153,16 @@ default ✓ [ 100% ] 000/100 VUs  45s
 
      data_received..............: 0 B     0 B/s
      data_sent..................: 0 B     0 B/s
-     http_req_blocked...........: avg=0s min=0s med=0s max=0s p(90)=0s p(95)=0s
-     http_req_connecting........: avg=0s min=0s med=0s max=0s p(90)=0s p(95)=0s
-     http_req_duration..........: avg=0s min=0s med=0s max=0s p(90)=0s p(95)=0s
+     http_req_blocked...........: avg=0s min=0s med=0s max=0s    p(90)=0s p(95)=0s
+     http_req_connecting........: avg=0s min=0s med=0s max=0s    p(90)=0s p(95)=0s
+     http_req_duration..........: avg=0s min=0s med=0s max=0s    p(90)=0s p(95)=0s
      http_req_failed............: 100.00% ✓ 15192      ✗ 0    
-     http_req_receiving.........: avg=0s min=0s med=0s max=0s p(90)=0s p(95)=0s
-     http_req_sending...........: avg=0s min=0s med=0s max=0s p(90)=0s p(95)=0s
-     http_req_tls_handshaking...: avg=0s min=0s med=0s max=0s p(90)=0s p(95)=0s
-     http_req_waiting...........: avg=0s min=0s med=0s max=0s p(90)=0s p(95)=0s
-     http_reqs..................: 15192   332.749785/s
-     iteration_duration.........: avg=1s min=1s med=1s max=1s p(90)=1s p(95)=1s
-     iterations.................: 3798    83.187446/s
+     http_req_receiving.........: avg=0s min=0s med=0s max=0s    p(90)=0s p(95)=0s
+     http_req_sending...........: avg=0s min=0s med=0s max=0s    p(90)=0s p(95)=0s
+     http_req_tls_handshaking...: avg=0s min=0s med=0s max=0s    p(90)=0s p(95)=0s
+     http_req_waiting...........: avg=0s min=0s med=0s max=0s    p(90)=0s p(95)=0s
+     http_reqs..................: 15192   332.718341/s
+     iteration_duration.........: avg=1s min=1s med=1s max=1.01s p(90)=1s p(95)=1s
+     iterations.................: 3798    83.179585/s
      vus........................: 10      min=10       max=100
      vus_max....................: 100     min=100      max=100
