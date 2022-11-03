@@ -17,7 +17,7 @@ export SERVICE_URL="http://localhost:${servicePort}";
 result=`k6 run ./conf-load-test-simple.js`;
 echo "$result" >> ./"${folderName}/conf-load-simple-1r";
 
-kubectl scale Deployment stress-test --replicas=5;
+k3s kubectl scale Deployment stress-test --replicas=5;
 
 sleep 10;
 
@@ -25,14 +25,14 @@ result=`k6 run ./conf-load-test-simple.js`;
 echo "$result" >> ./"${folderName}/conf-load-simple-5r";
 
 
-kubectl scale Deployment stress-test --replicas=10;
+k3s kubectl scale Deployment stress-test --replicas=10;
 
 sleep 10;
 
 result=`k6 run ./conf-load-test-simple.js`;
 echo "$result" >> ./"${folderName}/conf-load-simple-10r";
 
-kubectl scale Deployment stress-test --replicas=20;
+k3s kubectl scale Deployment stress-test --replicas=20;
 
 sleep 10;
 
