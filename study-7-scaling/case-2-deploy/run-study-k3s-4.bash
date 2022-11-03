@@ -6,7 +6,7 @@ fileName="load-1-5-cpu-80"
 
 k3s kubectl create -f ./deployment.yaml;
 
-k3s kubectl expose ReplicaSet scale-test --target-port 4000 --name scale-test --type=LoadBalancer --port 4000;
+k3s kubectl expose Deployment scale-test --target-port 4000 --name scale-test --type=LoadBalancer --port 4000;
 
 sleep 5;
 
@@ -17,7 +17,7 @@ export SERVICE_URL="http://localhost:${servicePort}";
 startTime=$(date +"%s%3N");
 echo "$startTime" >> ./"${folderName}/${fileName}-logs";
 
-k3s kubectl autoscale ReplicaSet scale-test --min=1 --max=5 --cpu-percent=80;
+k3s kubectl autoscale Deployment scale-test --min=1 --max=5 --cpu-percent=80;
 
 result=`k6 run ./conf-load-test-simple.js`;
 echo "$result" >> ./"${folderName}/${fileName}";
