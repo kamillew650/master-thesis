@@ -10,6 +10,11 @@ export const options = {
 };
 
 export default function () {
-  http.get(`${__ENV.SERVICE_URL}/simple-response`);
+  http.batch([
+    { method: "GET", url: `${__ENV.SERVICE_URL}/simple-response` },
+    { method: "GET", url: `${__ENV.SERVICE_URL}/simple-response` },
+    { method: "GET", url: `${__ENV.SERVICE_URL}/simple-response` },
+    { method: "GET", url: `${__ENV.SERVICE_URL}/simple-response` },
+  ]);
   sleep(1);
 }
