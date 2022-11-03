@@ -1,21 +1,26 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: stress-test
+  name: scale-test
   labels:
-    app: stress-test
+    app: scale-test
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: stress-test
+      app: scale-test
   template:
     metadata:
       name: container
       labels:
-        app: stress-test
+        app: scale-test
     spec:
       containers:
         - name: server
           image: calc-log-server:latest
           imagePullPolicy: Never
+          resources:
+            limits:
+              cpu: 100m
+            requests:
+              cpu: 50m
