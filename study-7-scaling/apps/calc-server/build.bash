@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t calc-server .
+docker build -t calc-log-server .

@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const port = 4000;
 
+console.log(Date.now());
+
 app.get("/simple-response", (req, res) => {
   res.send("Simple resp.");
 });

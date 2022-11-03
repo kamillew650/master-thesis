@@ -17,5 +17,5 @@ spec:
     spec:
       containers:
         - name: server
-          image: calc-server:latest
+          image: calc-log-server:latest
           imagePullPolicy: Never
